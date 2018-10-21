@@ -1,0 +1,76 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+
+  <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+   	
+    <ion-title>signup &nbsp;&nbsp;{{message}} </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<!-- <ion-content padding> -->
+   
+<ion-content padding class="login-background" class="signback">
+ 
+<form #userForm="ngForm" (ngSubmit)="SaveUser()">
+  <!-- <ion-card> -->
+<!-- <h5>Sign In</h5>   -->
+
+<ion-list>
+     <ion-item>
+        <ion-label floating>First Name</ion-label>
+        <ion-input type="text" #firstName="ngModel" name="firstName" [(ngModel)]="registerCredentials.firstName" required ></ion-input>
+      </ion-item>
+      <span class="errmsg" *ngIf="!firstName.valid">First Name is required.!</span>
+    <ion-item>
+       <ion-label floating>Last Name</ion-label>
+       <ion-input type="text"  #lastName="ngModel" name="lastName" [(ngModel)]="registerCredentials.lastName" required></ion-input>
+       </ion-item>
+      <span class="errmsg" *ngIf="!lastName.valid">Last Name is required.!</span>
+    <ion-item>
+      <ion-label floating>Create User Name</ion-label>
+      <ion-input type="text"  #usrLoginId="ngModel" name="usrLoginId" [(ngModel)]="registerCredentials.usrLoginId" required></ion-input>
+      <span class="errmsg" *ngIf="!usrLoginId.valid">User Name is required.!</span>
+    </ion-item>
+    <ion-item>
+	    <ion-label floating>Contact No</ion-label>
+	    <ion-input type="text"  #mobileNo="ngModel" name="mobileNo" [(ngModel)]="registerCredentials.mobileNo" required></ion-input>
+	  </ion-item>
+	  <span class="errmsg" *ngIf="!mobileNo.valid">Mobile no is required.!</span>
+
+    <ion-item>
+	    <ion-label floating>Email</ion-label>
+	    <ion-input type="text" #emailId="ngModel" name="emailId" [(ngModel)]="registerCredentials.emailId" required></ion-input>
+	 </ion-item>
+   <span class="errmsg" *ngIf="!emailId.valid">Email id is required.!</span>
+      <ion-item>
+	    <ion-label floating>Password</ion-label>
+	    <ion-input type="password"  #usrPassword="ngModel" name="usrPassword" [(ngModel)]="registerCredentials.usrPassword" required></ion-input>
+	 </ion-item>
+   <span class="errmsg" *ngIf="!usrPassword.valid">Password is required.!</span>
+	</ion-list>
+<p>
+    <button ion-button class="submit-btn" full type="submit" [disabled]="!userForm.form.valid">Sign Up</button>
+</p>
+
+  <div text-center>
+      <font>
+      <p>Already a member?</p>
+      </font>
+  
+      <button ion-button block>Sign In</button>
+  </div>
+</form>
+
+</ion-content>
+

@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Lifeline</ion-title>
+    
+  </ion-navbar>
+</ion-header>
+<head>
+    <style>
+    
+    </style>
+    </head>
+
+<ion-content class="mainpage">
+  <ion-slides autoplay="5000" loop spaceBetween="10" slidesPerView="1" style="height: 30vh">
+    <ion-slide>
+        <!-- *ngFor="let topic of allCurrencies" style="border-radius: 5px"
+        [ngStyle]="{'background': 'linear-gradient(283deg, #CFD4DE, '+topic.color+')'}"
+        (click)="addCurrencie(topic.name)" -->
+    <img src="assets/imgs/amb.jpg">
+  <!-- <hr margin> -->
+  <!-- <span class="white">{{ topic.name }}</span> -->
+</ion-slide>
+</ion-slides>
+
+
+<ion-card padding>
+
+ <p class="call">In case of emergency please press below button</p><br>
+
+ 
+
+ <img class="imgicon" alt="ambulance"  (click)="visitPatienttype()" src="assets/imgs/amb_icon.png"/>
+ <!-- <img src="assets/img/amb_icon.png"> -->
+   
+ 
+</ion-card>
+
+<ion-card padding>
+
+    <p><b>
+     Description
+    </b>
+     
+    </p>
+
+   
+   <p>Embedly can make a call to any web URL or RSS feed, grab the associated media — photos, videos, audio and text — and embed it on a third-party site. 
+   </p>
+     
+   
+</ion-card>
+
+</ion-content>
